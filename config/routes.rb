@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   get 'goodbye', to: 'application#goodbye'
 
   get 'extra', to: 'application#extra'
+
+  get 'ex_route', to: 'application#example', defaults: { format: :html }
+  get 'ex_route.json', to: 'application#example', defaults: { format: :json } 
+
 end
