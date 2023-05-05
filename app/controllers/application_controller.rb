@@ -21,4 +21,8 @@ class ApplicationController < ActionController::Base
             format.json { render json: { "message": "Here we go again doar ca in Json!" } }
         end
     end
+
+    def homepage
+        render template:'HomePage/homepage'
+    end
 end
