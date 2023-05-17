@@ -1,5 +1,8 @@
 class ExtraController < ApplicationController
     def new
-        
     end
-end
+  
+    def index
+    end
+  end
+  

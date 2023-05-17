@@ -1,2 +1,26 @@
-@import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+    color: $green-600;
+    font-weight: bold;
+  }
+  #logo:hover {
+    color: $green-800;
+    text-decoration: none;
+  }
+  
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
