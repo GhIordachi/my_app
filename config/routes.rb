@@ -10,8 +10,7 @@ Rails.application.routes.draw do
 
   root 'extra#index'
 
-  get 'goodbye', to: 'application#goodbye'
-  get 'extra', to: 'application#extra'
+  get 'show_products', to: 'extra#show_products'
   get 'log_out', to: 'extra#new'
   get 'accounts', to: 'users#index', as: "users"
 

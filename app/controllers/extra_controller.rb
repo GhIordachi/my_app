@@ -3,6 +3,10 @@ class ExtraController < ApplicationController
     end
   
     def index
+      @categories = Category.all
+    end
+    def show_products
+      @products = Product.all
     end
   end
   

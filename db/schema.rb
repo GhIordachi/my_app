@@ -14,6 +14,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_13_074353) do
   create_table "categories", force: :cascade do |t|
     t.string "name", null: false
     t.string "description", null: false
+    t.string "image_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -27,6 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_13_074353) do
     t.float "size", null: false
     t.string "brand", null: false
     t.string "color", null: false
+    t.string "image_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "category_id"

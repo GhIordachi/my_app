@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <div class="jumbotron">
+    <h1 class="display-4">HoopHaven</h1>
+    <p class="lead">All your basketball gear in one place!</p>
+    <hr class="my-4">
+  </div>
+</div>
+
+<div class="row">
+  <% @products.each do |product| %>
+  <% if product.category_id == params[:desired_id].to_i %>
+    <div class="col-md-3">
+      <div class="card category-card" style="width: 18rem;">
+        <div class="card-body">
+          <%= image_tag product.image_url, class: "d-block w-100" %>
+          <h5 class="card-title"><%= product.name %></h5>
+          <p class="card-text"><%= product.description %></p>
+        </div>
+      </div>
+    </div>
+    <% else %>
+    <h2>No products available!</h2> 
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to 'Back', root_path %>
