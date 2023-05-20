@@ -9,7 +9,6 @@ class CreateProducts < ActiveRecord::Migration[7.0]
       t.float :size, null: false
       t.string :brand, null: false
       t.string :color, null: false
-      t.string :image_url, null: false
       t.timestamps
     end
   end

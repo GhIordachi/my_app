@@ -12,12 +12,12 @@
     <div class="col-md-3">
       <div class="card category-card" style="width: 18rem;">
         <div class="card-body">
-          <%= image_tag product.image_url, class: "d-block w-100" %>
+          <%= image_tag product.image, class: "d-block w-100" %>
           <h5 class="card-title"><%= product.name %></h5>
           <p class="card-text"><%= product.description %></p>
           <p class="card-text">Color: "<%= product.color %>"</p>
-        <p class="card-text">Price: <%= product.price %>$</p>
-        <p class="card-text">Size: <%= product.size %></p>
+          <p class="card-text">Price: <%= product.price %>$</p>
+          <p class="card-text">Size: <%= product.size %></p>
         </div>
       </div>
     </div>
