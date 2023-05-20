@@ -40,3 +40,8 @@ tr:nth-child(even) {
 .category-card {
     margin:15px;
 }
+
+.card-image {
+    max-height: 200px; /* Adjust the value as needed */
+    object-fit: contain;
+  }

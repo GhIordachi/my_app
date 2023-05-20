@@ -9,15 +9,24 @@
 <div class="row">
   <% @categories.each do |category| %>
     <div class="col-md-3">
-      <div class="card category-card" style="width: 18rem;">
-        <div class="card-body">
-          <%= image_tag category.image_url, class: "d-block w-100" %>
-          <h5 class="card-title"><%= category.name %></h5>
-          <p class="card-text"><%= category.description %></p>
-          <%= link_to 'Show More', show_products_path( desired_id: category.name ), class: "btn btn-primary" %>
+      <div class="d-flex flex-column h-100">
+        <div class="card category-card" style="width: 18rem;">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="text-center">
+              <%= image_tag category.image_url, class: "card-image" %>
+            </div>
+            <div>
+              <h5 class="card-title"><%= category.name %></h5>
+              <p class="card-text"><%= category.description %></p>
+              <%= link_to 'Show More', show_products_path(desired_id: category.id), class: "btn btn-primary mt-auto" %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   <% end %>
 </div>
+
+
+
 
