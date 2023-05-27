@@ -44,4 +44,27 @@ tr:nth-child(even) {
 .card-image {
     max-height: 200px; /* Adjust the value as needed */
     object-fit: contain;
-  }
+}
+
+.registration-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.registration-box .form-group {
+    margin-bottom: 15px;
+}
+
+.btn-size {
+    width: 150px;
+}
+  
+.registration-box .text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
