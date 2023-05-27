@@ -18,6 +18,13 @@
           <p class="card-text">Color: "<%= product.color %>"</p>
           <p class="card-text">Price: <%= product.price %>$</p>
           <p class="card-text">Size: <%= product.size %></p>
+          <div class="text-center total font-weight-bold mt-4">
+            <% if current_user.present? %>
+              <%= button_to 'Buy Now!', orders_path(order: { user_id: current_user.id, product_id: product.id }), data: {method: :post}, class: "btn btn-primary" %>
+            <% else %>
+              <p class="text-muted mb-0">You need to be logged in to order!</p>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
