@@ -23,15 +23,15 @@
 
         <% if resource.role == 'client' %>
           <div class="form-group client-fields">
-            <%= f.text_field :nume, class: "form-control", placeholder: "Name" %>
+            <%= f.text_field :first_name, class: "form-control", placeholder: "First Name" %>
           </div>
 
           <div class="form-group client-fields">
-            <%= f.text_field :adresa, class: "form-control", placeholder: "Address" %>
+            <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name" %>
           </div>
 
           <div class="form-group client-fields">
-            <%= f.text_field :metoda_plata, class: "form-control", placeholder: "Payment Method" %>
+            <%= f.text_field :phone_number, class: "form-control", placeholder: "Phone Number" %>
           </div>
         <% end %>
 

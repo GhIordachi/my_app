@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :addresses
   resources :orders
   resources :categories
   resources :products
@@ -12,7 +13,6 @@ Rails.application.routes.draw do
   root 'extra#index'
 
   get 'show_products', to: 'extra#show_products'
-  get 'log_out', to: 'extra#new'
   get 'accounts', to: 'users#index', as: "users"
-
+  get 'my_account', to: 'users#show'
 end
