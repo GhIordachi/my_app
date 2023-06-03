@@ -1,0 +1,33 @@
+<%= form_for(@credit_card) do |f| %>
+<p class="fw-bold mb-4">Add new card:</p>
+
+<div class="form-outline mb-4">
+  <%= f.text_field :cardholder_name, autofocus: true, required: true, class: "form-control", placeholder: ""%>
+  <label class="form-label" for="formControlLgXsd">Cardholder's Name</label>
+</div>
+
+<div class="row mb-4">
+  <div class="col-7">
+    <div class="form-outline">
+      <%= f.text_field :card_number, autofocus: true, required: true, class: "form-control", placeholder: "0000 0000 0000 0000"%>
+      <label class="form-label" for="formControlLgXM">Card Number</label>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="form-outline">
+      <%= f.text_field :expire, autofocus: true, required: true, class: "form-control", placeholder: "MM/YYYY"%>
+      <label class="form-label" for="formControlLgExpk">Expire</label>
+    </div>
+  </div>
+  <div class="col-2">
+    <div class="form-outline">
+      <%= f.number_field :cvv, autofocus: true, required: true, class: "form-control", placeholder: "CVV"%>
+      <label class="form-label" for="formControlLgcvv">Cvv</label>
+    </div>
+  </div>
+</div>
+<div class="actions">
+    <%= f.submit "Add Card", class: "btn btn-primary btn-block mb-4" %>
+  </div>
+<% end %>
+

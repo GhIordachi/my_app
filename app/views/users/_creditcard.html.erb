@@ -1,0 +1,42 @@
+<section class="p-4 p-md-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-10 col-lg-6 col-xl-12">
+      <div class="card rounded-3">
+        <div class="card-body p-4">
+          <div class="text-center mb-4">
+            <h3>Credit Cards</h3>
+            <h6>Payment</h6>
+          </div>
+          <form action="">
+            <p class="fw-bold mb-4 pb-2">Saved cards:</p>
+
+            <div class="d-flex flex-row align-items-center mb-4 pb-1">
+              <img class="img-fluid" src="https://img.icons8.com/color/48/000000/mastercard-logo.png" />
+              <div class="flex-fill mx-3">
+                <div class="form-outline">
+                  <input type="text" id="formControlLgXc" class="form-control form-control-lg"
+                    value="**** **** **** 3193" />
+                  <label class="form-label" for="formControlLgXc">Card Number</label>
+                </div>
+              </div>
+              <a href="#!">Remove card</a>
+            </div>
+
+            <div class="d-flex flex-row align-items-center mb-4 pb-1">
+              <img class="img-fluid" src="https://img.icons8.com/color/48/000000/visa.png" />
+              <div class="flex-fill mx-3">
+                <div class="form-outline">
+                  <input type="text" id="formControlLgXs" class="form-control form-control-lg"
+                    value="**** **** **** 4296" />
+                  <label class="form-label" for="formControlLgXs">Card Number</label>
+                </div>
+              </div>
+              <a href="#!">Remove card</a>
+            </div>
+            <%= link_to 'Add Card', new_credit_card_path, class: "btn btn-primary" %>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

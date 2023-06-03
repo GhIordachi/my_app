@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_03_065740) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_03_081254) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -55,6 +55,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_03_065740) do
     t.string "name", null: false
     t.string "description", null: false
     t.string "image_url", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "credit_cards", force: :cascade do |t|
+    t.string "card_type"
+    t.string "card_number"
+    t.string "cardholder_name"
+    t.string "expire"
+    t.integer "cvv"
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
