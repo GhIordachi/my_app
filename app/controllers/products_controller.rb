@@ -6,9 +6,12 @@ class ProductsController < ApplicationController
   include Pagy::Backend
   # GET /products or /products.json
   def index
-    @products = Product.includes(:category).all
-
-    @pagy, @products = pagy(@products)
+    products = Product.includes(:category).all
+    products = products.where(category_id: params[:category_id]) if params[:category_id].present?
+    products = products.where(color: params[:color]) if params[:color].present?
+    products = products.where("name LIKE ? OR description LIKE ?","%#{params[:search]}%","%#{params[:search]}%") if params[:search].present?
+    products = products.order(:name)
+    @pagy, @products = pagy(products)
   end
 
   # GET /products/1 or /products/1.json
