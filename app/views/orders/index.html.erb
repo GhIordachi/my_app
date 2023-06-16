@@ -1,9 +1,12 @@
 <div class="container mt-5">
   <h2>Orders</h2>
   <br>
-  <%==pagy_info(@pagy)%>
+  <%= render partial: 'filter_menu' %>
   <br>
-  <table class="table table-warning table-striped">
+  <div id="table-container">
+    <%== pagy_info(@pagy) %>
+    <br>
+    <table class="table table-warning table-striped">
       <thead>
         <tr>
           <th scope="col">ID</th>
@@ -12,7 +15,7 @@
           <th scope="col">Quantity</th>
           <th scope="col">Status</th>
           <th scope="col">Tracking Number</th>
-          <th scope="col">Index</th>
+          <th scope="col">Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -24,11 +27,17 @@
             <td><%= order.quantity %></td>
             <td><%= order.status %></td>
             <td><%= order.tracking_number %></td>
-            <td><%= link_to 'Show', order %> | <%= link_to 'Edit', edit_order_path(order) %> | <%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Show', order %>
+              <% if current_user.admin? %>
+                <% if order.status == "not shipped" %>
+                  | <%= link_to 'Ship Now', edit_order_path(order) %> | <%= link_to 'Destroy', order, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+                <% end %>
+              <% end %>
+            </td>
           </tr>
         <% end %>
       </tbody>
     </table>
-    <%= link_to 'New Order', new_order_path %>
-    <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+    <%== pagy_nav(@pagy) %>
+  </div>
 </div>

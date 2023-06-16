@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
   has_many :orders
-  has_many :credit_cards
+  has_one :credit_card
   has_one :address
 
   devise :database_authenticatable, :registerable,

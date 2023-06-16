@@ -14,46 +14,7 @@
             </div>
           </div>
         </div>
-        <div class="card mb-4 mb-md-0">
-          <div class="card-body">
-          <h5 class="mb-3"></h5>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Full Name</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0"><%= @user.first_name + ' ' + @user.last_name %>Iordachi Gheorghe</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Email</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0"><%= @user.email %></p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Phone</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0"><%= @user.phone_number %>000000000</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Address</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0"><%= @address.street_address %></p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <%= render 'credit_card', credit_card: @credit_card %>
       </div>
       <div class="col-lg-8">
         <%= render 'address', address: @address, edit_link: edit_address_path(@address) %>
@@ -61,3 +22,4 @@
     </div>
   </div>
 </section>
+

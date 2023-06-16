@@ -13,8 +13,14 @@ class UsersController < ApplicationController
       address.save
       @user.address = address
     end
+    if @user.credit_card.nil?
+      card = CreditCard.create(user_id: @user.id)
+      card.save
+      @user.credit_card = card
+    end
   
     @address = @user.address
+    @credit_card = @user.credit_card
     end
   end
   
