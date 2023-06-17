@@ -18,9 +18,9 @@ class UsersController < ApplicationController
       card.save
       @user.credit_card = card
     end
-  
+
     @address = @user.address
     @credit_card = @user.credit_card
-    end
+  end
   end
   
